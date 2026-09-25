@@ -1,0 +1,4 @@
+##requirements.txt-> Bibliotecas externas necesarias.
+requests
+pandas
+matplotlib
