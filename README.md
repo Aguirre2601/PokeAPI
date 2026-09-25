@@ -17,10 +17,10 @@ Esta aplicación en Python permite buscar Pokémon utilizando la PokeAPI, filtra
 
 ## Instalar las dependencias necesarias 
 
-primero asegrense de tener activo su entorno virtual
-
-    ```bash
-     pip install -r requirements.txt
+ primero asegrense de tener activo su entorno virtual 
+ 
+    ```bash 
+    pip install -r requirements.txt
 
 ## Archivo Contenido esperado
 
