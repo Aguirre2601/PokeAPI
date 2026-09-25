@@ -1,6 +1,5 @@
 """
 Módulo de validaciones, reglas de negocio e indicadores.
-Responsable: Integrante 2 (Lógica & Validaciones).
 """
 
 def limpiar_entrada(texto: str) -> str:
