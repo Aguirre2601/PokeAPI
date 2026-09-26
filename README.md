@@ -56,3 +56,6 @@ Prompt 3: "..."
 Estado: Aceptado.
 
 Verificación: ...
+
+
+##Entrega final  10 minutos de presentacion, presencial, 2 preguntas a cada uno, entregable, el codigo (un README con como funciona la app, que hace, como usarla, codigo, informe de IA ), 
