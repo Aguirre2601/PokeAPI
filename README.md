@@ -51,8 +51,8 @@ Estado: Modificado.
 
 Verificación: ...
 
-Prompt 3: "..."
-
+Prompt 3: "Cómo leer un archivo JSON con Pandas, unificar tipo_1 y tipo_2 para contar la frecuencia y graficar un histograma con Matplotlib."
 Estado: Aceptado.
+Verificación: Se verificó la generación correcta del archivo grafico.png y que la notebook procesara el JSON incluso con valores nulos en tipo_2.
 
 Verificación: ...
