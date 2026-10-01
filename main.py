@@ -23,9 +23,8 @@ def ejecutar_accion(
     if opcion == "3":
         return funciones.crear_equipo(equipos, entrada or "")
     if opcion == "4":
-        return funciones.agregar_pokemon(equipos, nombre_equipo or "", entrada or "")
-    if opcion == "5":
         return funciones.resumir_equipos(equipos)
+        
     return None
 
 
@@ -42,9 +41,8 @@ while True:
     print("1. Buscar Pokémon")
     print("2. Filtrar por tipo")
     print("3. Crear equipo")
-    print("4. Agregar Pokémon a un equipo")
-    print("5. Ver equipos y métricas")
-    print("6. Guardar y salir")
+    print("4. Ver equipos y métricas")
+    print("5. Guardar y salir")
     opcion = input("Selecciona una opción: ").strip()
 
     if opcion == "1":
@@ -73,23 +71,25 @@ while True:
 
     elif opcion == "3":
         nombre = input("Nombre del nuevo equipo: ")
-        _, mensaje = ejecutar_accion("3", equipos, entrada=nombre)
+        exito, mensaje, nombre_equipo = ejecutar_accion("3", equipos, entrada=nombre)
         print(mensaje)
+        if exito:
+            almacenamiento.guardar_equipos(equipos)
+            print(f"Ahora puedes agregar Pokémones al equipo '{nombre_equipo}'.")
+            equipo = equipos[nombre_equipo]
+            while len(equipo) < 6:
+                entrada = input("Nombre del Pokémon a agregar:").strip()
+                pokemon, error = funciones.agregar_pokemon(equipo, entrada)
+                if error:
+                    print(error)
+                    continue
+                print(f"¡{pokemon['nombre'].capitalize()} agregado al equipo! ({len(equipo)}/6)")
+            if len(equipo) == 6:
+                print(f"Equipo '{nombre_equipo}' completo con 6 integrantes.")
+                
 
     elif opcion == "4":
-        if not equipos:
-            print("Primero crea un equipo.")
-            continue
-        print("Equipos disponibles:", ", ".join(equipos))
-        nombre_equipo = input("Equipo: ").strip()
-        nombre_pokemon = input("Pokémon que quieres agregar: ").strip()
-        pokemon, error = ejecutar_accion(
-            "4", equipos, entrada=nombre_pokemon, nombre_equipo=nombre_equipo
-        )
-        print(error if error else f"{pokemon['nombre'].capitalize()} agregado a {nombre_equipo}.")
-
-    elif opcion == "5":
-        resumen = ejecutar_accion("5", equipos)
+        resumen = ejecutar_accion("4", equipos)
         if not resumen:
             print("No hay equipos registrados.")
             continue
@@ -108,7 +108,7 @@ while True:
             print(f"Promedio de HP: {metricas['promedio_hp']}")
             print(f"Tipo dominante: {metricas['tipo_dominante']}")
 
-    elif opcion == "6":
+    elif opcion == "5":
         _, mensaje = finalizar_aplicacion(equipos)
         print(mensaje)
         break
