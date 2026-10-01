@@ -1,1 +1,19 @@
-"_comentario":"datos.json o datos.csv -> Información utilizada o producida por la aplicación." 
+{
+    "e11": [
+        {
+            "nombre": "pikachu",
+            "tipo_principal": "electric",
+            "peso": 60,
+            "altura": 4,
+            "hp": 35
+        },
+        {
+            "nombre": "gengar",
+            "tipo_principal": "ghost",
+            "peso": 405,
+            "altura": 15,
+            "hp": 60
+        }
+    ],
+    "joa": []
+}

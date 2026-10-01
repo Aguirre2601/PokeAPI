@@ -14,9 +14,10 @@ def validar_entrada_no_vacia(texto: str) -> bool:
     return bool(texto and texto.strip())
 
 
-def validar_limite_equipo(equipo: list, maximo: int = 6) -> bool:
+def validar_limite_equipo(equipo: list ) -> bool:
     """Comprueba que el equipo no supere la cantidad maxima permitida."""
-    return len(equipo) < maximo
+    """maximo: int = 6"""
+    return len(equipo) < 6
 
 
 def validar_pokemon_repetido(nombre_pokemon: str, equipo: list) -> bool:
