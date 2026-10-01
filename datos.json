@@ -1,1 +1,42 @@
-"_comentario":"datos.json o datos.csv -> Información utilizada o producida por la aplicación." 
+[
+  {
+    "id": 6,
+    "nombre": "charizard",
+    "tipo_1": "fire",
+    "tipo_2": "flying",
+    "hp": 78,
+    "ataque": 84,
+    "defensa": 78,
+    "velocidad": 100
+  },
+  {
+    "id": 25,
+    "nombre": "pikachu",
+    "tipo_1": "electric",
+    "tipo_2": null,
+    "hp": 35,
+    "ataque": 55,
+    "defensa": 40,
+    "velocidad": 90
+  },
+  {
+    "id": 9,
+    "nombre": "blastoise",
+    "tipo_1": "water",
+    "tipo_2": null,
+    "hp": 79,
+    "ataque": 83,
+    "defensa": 100,
+    "velocidad": 78
+  },
+  {
+    "id": 94,
+    "nombre": "gengar",
+    "tipo_1": "ghost",
+    "tipo_2": "poison",
+    "hp": 60,
+    "ataque": 65,
+    "defensa": 60,
+    "velocidad": 110
+  }
+] 
