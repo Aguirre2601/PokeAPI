@@ -4,23 +4,6 @@ Aplicación de consola en Python que permite buscar Pokémon usando la [PokeAPI]
 
 ---
 
-## Tabla de Contenidos
-
-- [Que hace el programa](#que-hace-el-programa)
-- [Herramientas y tecnologías](#herramientas-y-tecnologías)
-- [Requisitos previos](#requisitos-previos)
-- [Instalación](#instalación)
-- [Ejecución](#ejecución)
-- [Uso del menú](#uso-del-menú)
-- [Estructura de archivos](#estructura-de-archivos)
-- [Flujo de la aplicación](#flujo-de-la-aplicación)
-- [Dependencias](#dependencias)
-- [Archivos generados](#archivos-generados)
-- [Notebook de análisis](#notebook-de-análisis)
-- [Registro de uso de IA](#registro-de-uso-de-ia)
-
----
-
 ## Que hace el programa
 
 Esta aplicación permite a los usuarios:
@@ -119,94 +102,6 @@ Para ejecutar el notebook de Jupyter:
 ```bash
 jupyter notebook analisis.ipynb
 ```
-
----
-
-## Uso del menú
-
-Al ejecutar `python main.py`, verás el siguiente menú:
-
-```
---- GESTOR DE EQUIPOS POKÉMON ---
-1. Buscar Pokémon
-2. Filtrar por tipo
-3. Crear equipo
-4. Ver equipos y métricas
-5. Guardar y salir
-```
-
-### Opción 1: Buscar Pokémon
-
-1. Ingresa el nombre del Pokémon (ej: `pikachu`, `charizard`).
-2. El sistema muestra: nombre, tipo principal, HP, peso y altura.
-3. Si el Pokémon ya fue consultado antes, se carga desde caché.
-
-**Ejemplo de salida:**
-```
--> Pikachu descargado de la API.
-
-Pikachu
-Tipo principal: electric
-HP: 35
-Peso: 60
-Altura: 4
-```
-
-### Opción 2: Filtrar por tipo
-
-1. Ingresa un tipo elemental (ej: `fire`, `water`, `electric`).
-2. El sistema muestra los primeros 15 Pokémon de ese tipo.
-
-**Ejemplo de salida:**
-```
--> Lista de tipo 'fire' descargada de la API.
-
-Pokémon de tipo fire (primeros 15):
-- Charmander
-- Charmeleon
-- Charizard
-- Vulpix
-- Ninetales
-...
-```
-
-### Opción 3: Crear equipo
-
-1. Ingresa un nombre único para el equipo.
-2. El sistema te pedirá nombres de Pokémon uno por uno.
-3. Cada Pokémon se valida: debe existir en la PokeAPI y no estar repetido.
-4. El equipo se completa automáticamente al llegar a 6 integrantes.
-
-**Ejemplo de flujo:**
-```
-Nombre del nuevo equipo: MiEquipo
-Equipo 'MiEquipo' creado con éxito.
-Ahora puedes agregar Pokémones al equipo 'MiEquipo'.
-Nombre del Pokémon a agregar: pikachu
-¡Pikachu agregado al equipo! (1/6)
-Nombre del Pokémon a agregar: charizard
-¡Charizard agregado al equipo! (2/6)
-...
-Equipo 'MiEquipo' completo con 6 integrantes.
-```
-
-### Opción 4: Ver equipos y métricas
-
-Muestra todos los equipos con sus integrantes y métricas:
-
-```
---- MiEquipo ---
-- Pikachu | Tipo: electric | HP: 35
-- Charizard | Tipo: fire | HP: 78
-...
-Integrantes: 6/6
-Promedio de HP: 65.5
-Tipo dominante: fire
-```
-
-### Opción 5: Guardar y salir
-
-Guarda todos los equipos en `datos.json` y cierra la aplicación.
 
 ---
 
@@ -352,6 +247,7 @@ jupyter notebook analisis.ipynb
 |--------|--------|--------------|
 | "Cómo generar la conexión a la PokeAPI usando la librería requests con try/except." | Aceptado | Se probó buscar un Pokémon inexistente y cortar la conexión para verificar que el programa no colapse. |
 | "Cómo leer un archivo JSON con Pandas, unificar tipo_1 y tipo_2 para contar la frecuencia y graficar un histograma con Matplotlib." | Aceptado | Se verificó la generación correcta del archivo grafico.png y que la notebook procesara el JSON incluso con valores nulos en tipo_2. |
+|  "¿Cómo modificar la división de tareas anterior para separar el código y que esté mejor modularizado?" | Aceptado | Se dividieron las funcionalidades en archivos diferentes y se acoplo código relacionado |
 
 ---
 
